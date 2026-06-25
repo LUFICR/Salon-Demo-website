@@ -2,6 +2,8 @@
 
 Accessible, fast static landing page demo for Afreen Unisex Salon in Dehradun.
 
+Live site: https://salon-demo-website-ten.vercel.app
+
 ## Contents
 
 - `index.html` - single-page landing page with embedded CSS and LocalBusiness JSON-LD.
