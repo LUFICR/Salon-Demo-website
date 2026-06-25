@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Afreen Unisex Salon | Beauty Salon in Dehradun</title>
-    <meta name="description" content="Afreen Unisex Salon in Dehradun. Contact by WhatsApp or phone, review placeholder services, location, hours needing owner confirmation, and publication checklist.">
+    <meta name="description" content="Afreen Unisex Salon in Dehradun. A fast, accessible landing page draft with WhatsApp contact, phone contact, supplied trust signals, location, and owner-confirmation placeholders.">
     <meta property="og:title" content="Afreen Unisex Salon | Beauty Salon in Dehradun">
-    <meta property="og:description" content="A fast, accessible landing page draft for Afreen Unisex Salon with owner-confirmation placeholders clearly marked.">
+    <meta property="og:description" content="Modern accessible landing page draft for Afreen Unisex Salon, with all unverified copy clearly marked before publication.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/salon-hero-placeholder-1200.jpg">
+    <meta property="og:image" content="assets/salon-immersive-1280.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <style>
       :root {
         color-scheme: light;
-        --ink: #18212f;
-        --muted: #5b6472;
-        --paper: #fbfcfd;
-        --panel: #ffffff;
-        --line: #d9e1e8;
-        --teal: #04756f;
-        --teal-dark: #035955;
-        --rose: #b64063;
-        --gold: #a66f00;
-        --shadow: 0 18px 48px rgba(24, 33, 47, 0.12);
-        --radius: 8px;
-        --max: 1120px;
+        --ink: #14120f;
+        --muted: #665f57;
+        --soft: #f6f1ea;
+        --paper: #fffcf7;
+        --line: rgba(20, 18, 15, 0.14);
+        --panel: rgba(255, 252, 247, 0.92);
+        --charcoal: #191714;
+        --sage: #54685c;
+        --clay: #9b5246;
+        --blush: #ead3c8;
+        --focus: #ffbf47;
+        --max: 1180px;
       }
 
       * {
@@ -39,9 +39,9 @@
         margin: 0;
         background: var(--paper);
         color: var(--ink);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.55;
       }
 
       img {
@@ -55,23 +55,20 @@
       }
 
       a:focus-visible,
-      button:focus-visible,
       summary:focus-visible {
-        outline: 3px solid #f4b740;
+        outline: 3px solid var(--focus);
         outline-offset: 4px;
         border-radius: 6px;
       }
 
       .skip-link {
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
-        z-index: 10;
-        transform: translateY(-150%);
-        background: var(--ink);
-        color: #fff;
-        padding: 0.65rem 0.9rem;
-        border-radius: 6px;
+        position: fixed;
+        inset: 1rem auto auto 1rem;
+        z-index: 20;
+        transform: translateY(-180%);
+        background: #fff;
+        color: #000;
+        padding: 0.7rem 0.9rem;
         text-decoration: none;
       }
 
@@ -79,19 +76,20 @@
         transform: translateY(0);
       }
 
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 5;
-        border-bottom: 1px solid rgba(217, 225, 232, 0.86);
-        background: rgba(251, 252, 253, 0.94);
-        backdrop-filter: blur(14px);
+      .nav-wrap {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        background: linear-gradient(180deg, rgba(15, 14, 12, 0.84), rgba(15, 14, 12, 0.28));
+        color: #fff;
+        backdrop-filter: blur(18px);
       }
 
       .nav {
         width: min(100% - 2rem, var(--max));
+        min-height: 72px;
         margin: 0 auto;
-        min-height: 68px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -105,61 +103,89 @@
       }
 
       .brand strong {
-        font-size: 1rem;
+        font-size: 0.98rem;
         letter-spacing: 0;
       }
 
       .brand span {
-        color: var(--muted);
-        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.78rem;
       }
 
       .nav-links {
         display: none;
-        align-items: center;
         gap: 1rem;
-        color: var(--muted);
-        font-size: 0.94rem;
+        align-items: center;
+        font-size: 0.88rem;
       }
 
       .nav-links a {
+        color: rgba(255, 255, 255, 0.78);
         text-decoration: none;
       }
 
       .nav-links a:hover {
-        color: var(--teal-dark);
+        color: #fff;
       }
 
       .shell {
         width: min(100% - 2rem, var(--max));
-        margin: 0 auto;
+        margin-inline: auto;
       }
 
       .hero {
-        min-height: calc(100svh - 68px);
+        position: relative;
+        min-height: 100svh;
         display: grid;
-        align-items: center;
-        padding: 2rem 0 2.75rem;
+        align-items: end;
+        overflow: hidden;
+        background: var(--charcoal);
+        color: #fff;
       }
 
-      .hero-grid {
-        display: grid;
-        gap: 1.4rem;
+      .hero picture,
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero img {
+        object-fit: cover;
+        filter: saturate(0.92) contrast(1.04);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(10, 9, 8, 0.92) 0%, rgba(10, 9, 8, 0.72) 38%, rgba(10, 9, 8, 0.18) 76%),
+          linear-gradient(180deg, rgba(10, 9, 8, 0.32) 0%, rgba(10, 9, 8, 0.12) 45%, rgba(10, 9, 8, 0.72) 100%);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: min(100% - 2rem, var(--max));
+        margin: 0 auto;
+        padding: 8rem 0 2rem;
       }
 
       .hero-copy {
+        max-width: 680px;
         display: grid;
-        align-content: center;
         gap: 1rem;
       }
 
       .eyebrow {
         margin: 0;
-        color: var(--teal-dark);
-        font-size: 0.82rem;
+        color: #f4ded4;
+        font-size: 0.78rem;
         font-weight: 800;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
 
       h1,
@@ -170,191 +196,250 @@
       }
 
       h1 {
+        max-width: 10.6ch;
         margin-bottom: 0;
-        max-width: 12ch;
-        font-size: clamp(2.45rem, 12vw, 5.5rem);
-        line-height: 0.93;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.25rem, 14vw, 8.5rem);
+        line-height: 0.84;
         letter-spacing: 0;
       }
 
       h2 {
-        margin-bottom: 0.6rem;
-        font-size: clamp(1.75rem, 5vw, 3rem);
-        line-height: 1.02;
+        margin-bottom: 0.7rem;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.1rem, 6vw, 4.4rem);
+        line-height: 0.94;
         letter-spacing: 0;
       }
 
       h3 {
         margin-bottom: 0.35rem;
-        font-size: 1.08rem;
-        line-height: 1.25;
+        font-size: 1.05rem;
+        line-height: 1.2;
       }
 
       .lede {
-        max-width: 62ch;
+        max-width: 58ch;
         margin-bottom: 0;
-        color: #394352;
-        font-size: clamp(1.05rem, 3vw, 1.25rem);
+        color: rgba(255, 255, 255, 0.82);
+        font-size: clamp(1.02rem, 2.6vw, 1.35rem);
       }
 
-      .cta-row {
+      .actions {
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
-        margin-top: 0.35rem;
+        margin-top: 0.45rem;
       }
 
       .button {
-        min-height: 48px;
+        min-height: 50px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.55rem;
         border: 1px solid transparent;
         border-radius: 8px;
-        padding: 0.78rem 1rem;
-        font-weight: 800;
+        padding: 0.8rem 1.05rem;
+        font-weight: 850;
         text-decoration: none;
       }
 
       .button.primary {
-        background: var(--teal);
-        color: #fff;
-        box-shadow: 0 12px 28px rgba(4, 117, 111, 0.24);
+        background: #fff;
+        color: #14120f;
       }
 
       .button.primary:hover {
-        background: var(--teal-dark);
+        background: #f4ded4;
       }
 
       .button.secondary {
-        border-color: var(--line);
-        background: #fff;
-        color: var(--ink);
+        border-color: rgba(255, 255, 255, 0.32);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .button.secondary:hover {
-        border-color: var(--teal);
-        color: var(--teal-dark);
+        border-color: #fff;
       }
 
-      .hero-media {
-        overflow: hidden;
-        border-radius: var(--radius);
-        background: #e8eef2;
-        box-shadow: var(--shadow);
+      .hero-panel {
+        margin-top: 2rem;
+        display: grid;
+        gap: 0;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(18, 16, 14, 0.6);
+        backdrop-filter: blur(18px);
       }
 
-      .hero-media img {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
+      .hero-panel > * {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
       }
 
-      .placeholder-note {
-        border-left: 4px solid var(--rose);
-        background: #fff4f7;
-        color: #693044;
-        padding: 0.85rem 1rem;
+      .hero-panel > *:last-child {
+        border-bottom: 0;
+      }
+
+      .metric strong {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .metric span,
+      .note {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.9rem;
+      }
+
+      .placeholder {
+        color: #5b221b;
+        background: #fff2ed;
+        border-left: 4px solid var(--clay);
+        padding: 0.9rem 1rem;
         border-radius: 0 8px 8px 0;
         font-size: 0.94rem;
       }
 
+      .placeholder.dark {
+        color: #ffe5dc;
+        background: rgba(155, 82, 70, 0.22);
+        border-left-color: #ffd2c3;
+      }
+
       .section {
-        padding: 3.25rem 0;
+        padding: 4rem 0;
       }
 
-      .section.alt {
-        border-block: 1px solid var(--line);
-        background: #eef5f5;
+      .section.soft {
+        background: var(--soft);
       }
 
-      .section-head {
-        max-width: 720px;
-        margin-bottom: 1.4rem;
+      .split {
+        display: grid;
+        gap: 2rem;
       }
 
-      .section-head p {
+      .section-kicker {
+        margin-bottom: 0.6rem;
+        color: var(--clay);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .section-copy {
+        max-width: 68ch;
         color: var(--muted);
       }
 
-      .grid {
+      .trust-strip {
+        display: grid;
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .trust-item {
+        background: var(--paper);
+        padding: 1.2rem;
+      }
+
+      .trust-item strong {
+        display: block;
+        font-size: 2.25rem;
+        line-height: 1;
+      }
+
+      .trust-item span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .service-board {
         display: grid;
         gap: 1rem;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--panel);
-        padding: 1.1rem;
-      }
-
-      .card p:last-child {
-        margin-bottom: 0;
-      }
-
-      .stat {
-        display: grid;
-        gap: 0.25rem;
-      }
-
-      .stat strong {
-        font-size: 1.65rem;
-        line-height: 1;
-      }
-
-      .tag {
-        display: inline-flex;
-        width: fit-content;
-        align-items: center;
-        border: 1px solid #f0b7c7;
-        border-radius: 999px;
-        background: #fff7fa;
-        color: #7c2340;
-        padding: 0.22rem 0.62rem;
-        font-size: 0.78rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-
-      .service-list {
-        display: grid;
-        gap: 0.75rem;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-      }
-
-      .service-list li {
-        border-left: 3px solid var(--teal);
-        padding-left: 0.85rem;
-      }
-
-      .review-placeholder {
+      .service-row {
         display: grid;
         gap: 0.7rem;
+        border-top: 1px solid var(--line);
+        padding: 1.1rem 0;
       }
 
-      .quote-line {
-        width: 100%;
+      .service-row:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .service-index {
+        color: var(--clay);
+        font-weight: 900;
+      }
+
+      .label {
+        display: inline-flex;
+        width: fit-content;
+        border: 1px solid rgba(155, 82, 70, 0.34);
+        border-radius: 999px;
+        padding: 0.22rem 0.62rem;
+        color: #6e322a;
+        background: #fff4ef;
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .about-block {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-callout {
+        background: var(--charcoal);
+        color: #fff;
+        padding: 1.3rem;
+        border-radius: 8px;
+      }
+
+      .about-callout p {
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .review-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .review-card {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.52);
+        padding: 1.1rem;
+        border-radius: 8px;
+      }
+
+      .quote-bars {
+        display: grid;
+        gap: 0.55rem;
+        margin: 0.8rem 0;
+      }
+
+      .quote-bars span {
         height: 0.75rem;
         border-radius: 999px;
-        background: linear-gradient(90deg, #dce5eb, #f4f7f9);
+        background: linear-gradient(90deg, rgba(84, 104, 92, 0.24), rgba(155, 82, 70, 0.12));
       }
 
-      .quote-line.short {
+      .quote-bars span:last-child {
         width: 58%;
       }
 
       details {
         border-top: 1px solid var(--line);
-        background: transparent;
       }
 
       details:last-child {
@@ -363,86 +448,73 @@
 
       summary {
         cursor: pointer;
-        padding: 1rem 0;
-        font-weight: 800;
+        padding: 1.05rem 0;
+        font-weight: 900;
       }
 
       details p {
+        max-width: 68ch;
         color: var(--muted);
-        padding-bottom: 1rem;
+        padding-bottom: 1.1rem;
+      }
+
+      .location-band {
+        background: var(--charcoal);
+        color: #fff;
+      }
+
+      .location-band .section-kicker {
+        color: #f4ded4;
+      }
+
+      .location-band .section-copy,
+      .location-band .muted {
+        color: rgba(255, 255, 255, 0.72);
       }
 
       address {
         font-style: normal;
       }
 
-      .location-grid {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .map-box {
-        min-height: 260px;
+      .map-panel {
+        min-height: 320px;
         display: grid;
         place-items: center;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.16);
         background:
-          linear-gradient(135deg, rgba(4, 117, 111, 0.16), rgba(182, 64, 99, 0.12)),
-          #f9fbfc;
-        padding: 1rem;
+          linear-gradient(135deg, rgba(234, 211, 200, 0.16), rgba(84, 104, 92, 0.26)),
+          #211e1a;
+        padding: 1.2rem;
         text-align: center;
+        border-radius: 8px;
       }
 
-      .map-box p {
-        max-width: 36ch;
-        margin-inline: auto;
-        color: var(--muted);
-      }
-
-      .hours {
+      .hours-table {
         width: 100%;
         border-collapse: collapse;
+        background: var(--paper);
       }
 
-      .hours th,
-      .hours td {
-        border-bottom: 1px solid var(--line);
-        padding: 0.85rem 0;
+      .hours-table caption {
+        padding: 0 0 1rem;
+        color: var(--muted);
+        text-align: left;
+      }
+
+      .hours-table th,
+      .hours-table td {
+        border-top: 1px solid var(--line);
+        padding: 0.95rem 0;
         text-align: left;
         vertical-align: top;
       }
 
-      .hours th {
-        width: 38%;
-        color: var(--ink);
-        font-weight: 800;
-      }
-
-      @media (max-width: 520px) {
-        .hours,
-        .hours tbody,
-        .hours tr,
-        .hours th,
-        .hours td {
-          display: block;
-          width: 100%;
-        }
-
-        .hours tr {
-          border-bottom: 1px solid var(--line);
-          padding: 0.75rem 0;
-        }
-
-        .hours th,
-        .hours td {
-          border-bottom: 0;
-          padding: 0.15rem 0;
-        }
+      .hours-table th {
+        width: 34%;
       }
 
       .site-footer {
-        background: var(--ink);
+        background: #0f0e0c;
         color: #fff;
         padding: 2rem 0;
       }
@@ -461,34 +533,70 @@
       }
 
       .site-footer .muted {
-        color: #c4ccd5;
+        color: rgba(255, 255, 255, 0.64);
       }
 
-      @media (min-width: 720px) {
+      @media (max-width: 520px) {
+        .hours-table,
+        .hours-table tbody,
+        .hours-table tr,
+        .hours-table th,
+        .hours-table td {
+          display: block;
+          width: 100%;
+        }
+
+        .hours-table tr {
+          border-top: 1px solid var(--line);
+          padding: 0.85rem 0;
+        }
+
+        .hours-table th,
+        .hours-table td {
+          border: 0;
+          padding: 0.12rem 0;
+        }
+      }
+
+      @media (min-width: 760px) {
         .nav-links {
           display: flex;
         }
 
-        .hero-grid {
-          grid-template-columns: 0.94fr 1.06fr;
-          align-items: center;
+        .hero-inner {
+          padding-bottom: 3rem;
         }
 
-        .hero-media img {
-          aspect-ratio: 5 / 4;
-        }
-
-        .cards {
+        .hero-panel {
           grid-template-columns: repeat(3, 1fr);
         }
 
-        .two-col {
-          grid-template-columns: repeat(2, 1fr);
+        .hero-panel > * {
+          border-bottom: 0;
+          border-right: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .hero-panel > *:last-child {
+          border-right: 0;
+        }
+
+        .split {
+          grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
           align-items: start;
         }
 
-        .location-grid {
-          grid-template-columns: 0.85fr 1.15fr;
+        .trust-strip {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .service-row {
+          grid-template-columns: 4rem 1fr 1.15fr;
+          align-items: start;
+        }
+
+        .about-block,
+        .review-grid {
+          grid-template-columns: repeat(3, 1fr);
         }
 
         .footer-grid {
@@ -509,7 +617,7 @@
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "BeautySalon"],
         "name": "Afreen Unisex Salon",
-        "description": "Beauty salon in Dehradun. Services, hours, images, price range, and website URL require owner confirmation before publication.",
+        "description": "Beauty salon in Dehradun. Services, hours, images, price range, website URL, and map details require owner confirmation before publication.",
         "telephone": "+91 92582 11276",
         "address": {
           "@type": "PostalAddress",
@@ -542,11 +650,11 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
+    <header class="nav-wrap">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Afreen Unisex Salon home">
           <strong>Afreen Unisex Salon</strong>
-          <span>Beauty salon in Dehradun</span>
+          <span>Dehradun beauty salon</span>
         </a>
         <div class="nav-links" aria-label="Page sections">
           <a href="#services">Services</a>
@@ -558,122 +666,153 @@
     </header>
 
     <main id="main">
-      <section class="hero shell" id="top" aria-labelledby="page-title">
-        <div class="hero-grid">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <picture>
+          <source srcset="assets/salon-immersive-720.jpg 720w, assets/salon-immersive-1280.jpg 1280w, assets/salon-immersive-1920.jpg 1920w" sizes="100vw">
+          <img src="assets/salon-immersive-1280.jpg" width="1280" height="720" alt="Generic placeholder photograph of a modern salon interior for owner replacement before publication" fetchpriority="high">
+        </picture>
+        <div class="hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow">Beauty salon · Dehradun</p>
+            <p class="eyebrow">Beauty salon / Dehradun</p>
             <h1 id="page-title">Afreen Unisex Salon</h1>
-            <p class="lede">A fast, accessible landing page draft for helping customers review basic salon information and contact the owner directly.</p>
-            <div class="cta-row" aria-label="Contact actions">
+            <p class="lede">A more polished owned web presence for customers to review the supplied business facts, find the location, and contact the salon directly.</p>
+            <div class="actions" aria-label="Contact actions">
               <a class="button primary" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20I%20would%20like%20to%20ask%20about%20an%20appointment." rel="noopener">WhatsApp</a>
               <a class="button secondary" href="tel:+919258211276">Call +91 92582 11276</a>
             </div>
-            <p class="placeholder-note"><strong>Placeholder before publication:</strong> Replace the generated salon image and all marked service, review, and hours copy with owner-approved content.</p>
           </div>
-          <picture class="hero-media">
-            <source srcset="assets/salon-hero-placeholder-720.jpg 720w, assets/salon-hero-placeholder-1200.jpg 1200w, assets/salon-hero-placeholder-1600.jpg 1600w" sizes="(min-width: 720px) 50vw, 100vw">
-            <img src="assets/salon-hero-placeholder-1200.jpg" width="1200" height="900" alt="Generic placeholder image of a clean modern salon interior for owner replacement before publication" fetchpriority="high">
-          </picture>
+
+          <div class="hero-panel" aria-label="Supplied trust signals">
+            <div class="metric">
+              <strong>4.9</strong>
+              <span>Supplied rating</span>
+            </div>
+            <div class="metric">
+              <strong>198</strong>
+              <span>Supplied review count</span>
+            </div>
+            <div>
+              <strong>Owned site gap</strong>
+              <p class="note">No website was found, limiting service evaluation and direct conversion.</p>
+            </div>
+          </div>
+
+          <p class="placeholder dark"><strong>Placeholder before publication:</strong> This generated hero image and every marked content block must be replaced or approved by the owner before launch.</p>
         </div>
       </section>
 
-      <section class="section alt" aria-labelledby="trust-title">
-        <div class="shell">
-          <div class="section-head">
-            <p class="eyebrow">Trust signals</p>
-            <h2 id="trust-title">Known facts from the supplied audit</h2>
-            <p>These points come from the supplied business facts only. The page does not invent awards, pricing, services, staff credentials, or revenue claims.</p>
+      <section class="section soft" aria-labelledby="trust-title">
+        <div class="shell split">
+          <div>
+            <p class="section-kicker">Verified display data</p>
+            <h2 id="trust-title">Only the facts supplied.</h2>
           </div>
-          <div class="grid cards">
-            <article class="card stat">
-              <span class="tag">Supplied fact</span>
-              <strong>4.9</strong>
-              <p>Rating listed in the provided source data.</p>
-            </article>
-            <article class="card stat">
-              <span class="tag">Supplied fact</span>
-              <strong>198</strong>
-              <p>Review count listed in the provided source data.</p>
-            </article>
-            <article class="card stat">
-              <span class="tag">Audit gap</span>
-              <strong>Owned site</strong>
-              <p>No website was found, so customers cannot evaluate services or convert through an owned web channel.</p>
-            </article>
+          <div>
+            <p class="section-copy">The page uses the scraped business facts only as display data. It does not invent testimonials, credentials, pricing, years in business, service outcomes, or revenue claims.</p>
+            <div class="trust-strip" aria-label="Known facts">
+              <div class="trust-item">
+                <strong>4.9</strong>
+                <span>Rating from supplied data.</span>
+              </div>
+              <div class="trust-item">
+                <strong>198</strong>
+                <span>Review count from supplied data.</span>
+              </div>
+              <div class="trust-item">
+                <strong>0</strong>
+                <span>Owned website found in the audit.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="services" aria-labelledby="services-title">
-        <div class="shell grid two-col">
-          <div class="section-head">
-            <p class="eyebrow">Services</p>
-            <h2 id="services-title">Service placeholders to confirm</h2>
-            <p>These are structural placeholders only. The owner should replace them with exact service names, descriptions, availability, and any required disclaimers.</p>
+        <div class="shell split">
+          <div>
+            <p class="section-kicker">Service menu</p>
+            <h2 id="services-title">Structured for real services, not filler.</h2>
+            <p class="section-copy">These rows are placeholders for owner-approved service categories. Keep only services that are actually offered.</p>
           </div>
-          <div class="card">
-            <ul class="service-list">
-              <li><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Hair services category.</li>
-              <li><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Skin or beauty services category.</li>
-              <li><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Grooming or styling services category.</li>
-              <li><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Bridal, event, or package services if actually offered.</li>
-            </ul>
+          <div class="service-board">
+            <div class="service-row">
+              <span class="service-index">01</span>
+              <h3>Hair services</h3>
+              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Add exact hair service names, availability, and any consultation notes.</p>
+            </div>
+            <div class="service-row">
+              <span class="service-index">02</span>
+              <h3>Skin or beauty services</h3>
+              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Add only currently available beauty services and required disclaimers.</p>
+            </div>
+            <div class="service-row">
+              <span class="service-index">03</span>
+              <h3>Grooming and styling</h3>
+              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Confirm grooming, styling, appointment, and walk-in details.</p>
+            </div>
+            <div class="service-row">
+              <span class="service-index">04</span>
+              <h3>Event or package services</h3>
+              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Include bridal, event, or package services only if actually offered.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section alt" aria-labelledby="about-title">
-        <div class="shell grid two-col">
-          <div>
-            <p class="eyebrow">About</p>
-            <h2 id="about-title">A clearer owned channel for local customers</h2>
-          </div>
-          <div>
-            <p>Afreen Unisex Salon is listed as a beauty salon in Dehradun. This draft focuses on contact clarity, accessible navigation, and owner-approved content areas so customers can quickly decide how to get in touch.</p>
-            <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Add a short owner-approved description of the salon experience, staff, hygiene practices, and appointment process.</p>
+      <section class="section soft" aria-labelledby="about-title">
+        <div class="shell">
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">A sharper first impression for local search visitors.</h2>
+          <div class="about-block">
+            <div>
+              <h3>What is known</h3>
+              <p>Afreen Unisex Salon is listed as a beauty salon in Dehradun with the supplied phone and WhatsApp contact.</p>
+            </div>
+            <div>
+              <h3>What needs approval</h3>
+              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Add a real description of the salon, team, hygiene process, and appointment experience.</p>
+            </div>
+            <div class="about-callout">
+              <h3>Audit gap</h3>
+              <p>No website was found, so customers cannot evaluate services or convert through an owned web channel.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="reviews" aria-labelledby="reviews-title">
-        <div class="shell">
-          <div class="section-head">
-            <p class="eyebrow">Reviews</p>
-            <h2 id="reviews-title">Review placeholders</h2>
-            <p>The rating and review count are supplied facts. Individual testimonials are not included because no review text was provided.</p>
+        <div class="shell split">
+          <div>
+            <p class="section-kicker">Reviews</p>
+            <h2 id="reviews-title">Trust without fake testimonials.</h2>
+            <p class="section-copy">The aggregate rating and count are supplied facts. Individual review quotes stay as placeholders until real excerpts are approved.</p>
           </div>
-          <div class="grid cards" aria-label="Review content placeholders">
-            <article class="card review-placeholder">
-              <span class="tag">Placeholder</span>
-              <div class="quote-line" aria-hidden="true"></div>
-              <div class="quote-line" aria-hidden="true"></div>
-              <div class="quote-line short" aria-hidden="true"></div>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Add a real review excerpt only with permission and accurate attribution.</p>
+          <div class="review-grid" aria-label="Review placeholders">
+            <article class="review-card">
+              <span class="label">Placeholder</span>
+              <div class="quote-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+              <p><strong>[PLACEHOLDER]</strong> Add a real review excerpt only with accurate attribution and permission.</p>
             </article>
-            <article class="card review-placeholder">
-              <span class="tag">Placeholder</span>
-              <div class="quote-line" aria-hidden="true"></div>
-              <div class="quote-line" aria-hidden="true"></div>
-              <div class="quote-line short" aria-hidden="true"></div>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Add another approved review excerpt or remove this block.</p>
+            <article class="review-card">
+              <span class="label">Placeholder</span>
+              <div class="quote-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+              <p><strong>[PLACEHOLDER]</strong> Add another owner-approved review excerpt or remove this block.</p>
             </article>
-            <article class="card review-placeholder">
-              <span class="tag">Placeholder</span>
-              <div class="quote-line" aria-hidden="true"></div>
-              <div class="quote-line" aria-hidden="true"></div>
-              <div class="quote-line short" aria-hidden="true"></div>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Keep review content current and verifiable.</p>
+            <article class="review-card">
+              <span class="label">Placeholder</span>
+              <div class="quote-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+              <p><strong>[PLACEHOLDER]</strong> Keep review content verifiable, current, and non-misleading.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="faq" aria-labelledby="faq-title">
-        <div class="shell grid two-col">
-          <div class="section-head">
-            <p class="eyebrow">FAQ</p>
-            <h2 id="faq-title">Questions to finalize before launch</h2>
-            <p>FAQ answers are intentionally conservative until the owner confirms exact operations.</p>
+      <section class="section soft" id="faq" aria-labelledby="faq-title">
+        <div class="shell split">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faq-title">Questions to finalize before launch.</h2>
+            <p class="section-copy">Answers remain conservative because operating details were not supplied.</p>
           </div>
           <div>
             <details>
@@ -682,7 +821,7 @@
             </details>
             <details>
               <summary>What services are available?</summary>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Add only the services currently offered by Afreen Unisex Salon.</p>
+              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Add only services currently offered by Afreen Unisex Salon.</p>
             </details>
             <details>
               <summary>What are the opening hours?</summary>
@@ -690,17 +829,17 @@
             </details>
             <details>
               <summary>Where is the salon located?</summary>
-              <p>The supplied address is 52, Subhash Rd, near mkp chowk, Race Course, Dehradun, Uttarakhand 248001, India. The owner should confirm formatting and map accuracy before launch.</p>
+              <p>The supplied address is 52, Subhash Rd, near mkp chowk, Race Course, Dehradun, Uttarakhand 248001, India. Confirm formatting and map accuracy before launch.</p>
             </details>
           </div>
         </div>
       </section>
 
-      <section class="section" id="location" aria-labelledby="location-title">
-        <div class="shell location-grid">
+      <section class="section location-band" id="location" aria-labelledby="location-title">
+        <div class="shell split">
           <div>
-            <p class="eyebrow">Location</p>
-            <h2 id="location-title">Visit in Dehradun</h2>
+            <p class="section-kicker">Location</p>
+            <h2 id="location-title">Visit in Dehradun.</h2>
             <address>
               best salon in, Top Salon in,<br>
               52, Subhash Rd, near mkp chowk,<br>
@@ -708,30 +847,30 @@
               Uttarakhand 248001, India
             </address>
             <p class="muted"><strong>[OWNER CONFIRMATION REQUIRED]</strong> The supplied address includes promotional wording. Confirm the preferred public address before publishing.</p>
-            <div class="cta-row">
+            <div class="actions">
               <a class="button primary" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20please%20share%20your%20location%20and%20availability." rel="noopener">Ask on WhatsApp</a>
               <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=52%20Subhash%20Rd%20near%20mkp%20chowk%20Race%20Course%20Dehradun%20Uttarakhand%20248001%20India" rel="noopener">Open map</a>
             </div>
           </div>
-          <div class="map-box" role="img" aria-label="Map placeholder for Afreen Unisex Salon address in Dehradun">
+          <div class="map-panel" role="img" aria-label="Map placeholder for Afreen Unisex Salon address in Dehradun">
             <div>
               <h3>Map placeholder</h3>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Embed or link to the owner-approved Google Business Profile map after confirming the exact listing.</p>
+              <p class="muted"><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Embed or link to the owner-approved Google Business Profile map after confirming the exact listing.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section alt" aria-labelledby="hours-title">
-        <div class="shell grid two-col">
+      <section class="section" aria-labelledby="hours-title">
+        <div class="shell split">
           <div>
-            <p class="eyebrow">Hours</p>
-            <h2 id="hours-title">Opening hours need confirmation</h2>
-            <p class="muted">Hours were not included in the supplied facts. Do not publish operating hours until the owner confirms them.</p>
+            <p class="section-kicker">Hours</p>
+            <h2 id="hours-title">Opening hours need confirmation.</h2>
+            <p class="section-copy">Hours were not included in the supplied facts. Do not publish operating hours until the owner confirms them.</p>
           </div>
-          <div class="card">
-            <table class="hours">
-              <caption class="muted">Placeholder hours table for owner completion</caption>
+          <div>
+            <table class="hours-table">
+              <caption>Placeholder hours table for owner completion</caption>
               <tbody>
                 <tr>
                   <th scope="row">Monday-Friday</th>
@@ -756,7 +895,7 @@
       <div class="shell footer-grid">
         <div>
           <strong>Afreen Unisex Salon</strong>
-          <p class="muted">Beauty salon in Dehradun. Draft page prepared with placeholders clearly marked before publication.</p>
+          <p class="muted">Beauty salon in Dehradun. Draft page prepared with owner-confirmation placeholders clearly marked before publication.</p>
         </div>
         <div>
           <p><a href="tel:+919258211276">Call +91 92582 11276</a></p>
