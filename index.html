@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Afreen Unisex Salon | Beauty Salon in Dehradun</title>
-    <meta name="description" content="Afreen Unisex Salon in Dehradun. A fast, accessible landing page draft with WhatsApp contact, phone contact, supplied trust signals, location, and owner-confirmation placeholders.">
+    <meta name="description" content="Afreen Unisex Salon in Dehradun. A fast, accessible landing page with WhatsApp contact, phone contact, supplied trust signals, location, and owner review notes.">
     <meta property="og:title" content="Afreen Unisex Salon | Beauty Salon in Dehradun">
-    <meta property="og:description" content="Modern accessible landing page draft for Afreen Unisex Salon, with all unverified copy clearly marked before publication.">
+    <meta property="og:description" content="Modern accessible landing page for Afreen Unisex Salon with clear contact options and supplied trust signals.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/salon-immersive-1280.jpg">
     <meta name="twitter:card" content="summary_large_image">
@@ -294,7 +294,7 @@
         font-size: 0.9rem;
       }
 
-      .placeholder {
+      .draft-note {
         color: #5b221b;
         background: #fff2ed;
         border-left: 4px solid var(--clay);
@@ -303,7 +303,7 @@
         font-size: 0.94rem;
       }
 
-      .placeholder.dark {
+      .draft-note.dark {
         color: #ffe5dc;
         background: rgba(155, 82, 70, 0.22);
         border-left-color: #ffd2c3;
@@ -380,18 +380,12 @@
         font-weight: 900;
       }
 
-      .label {
-        display: inline-flex;
-        width: fit-content;
-        border: 1px solid rgba(155, 82, 70, 0.34);
-        border-radius: 999px;
-        padding: 0.22rem 0.62rem;
-        color: #6e322a;
-        background: #fff4ef;
-        font-size: 0.72rem;
-        font-weight: 900;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+      .service-note {
+        color: var(--muted);
+      }
+
+      .service-note strong {
+        color: var(--ink);
       }
 
       .about-block {
@@ -422,20 +416,14 @@
         border-radius: 8px;
       }
 
-      .quote-bars {
-        display: grid;
-        gap: 0.55rem;
-        margin: 0.8rem 0;
+      .review-card.featured {
+        background: var(--charcoal);
+        color: #fff;
       }
 
-      .quote-bars span {
-        height: 0.75rem;
-        border-radius: 999px;
-        background: linear-gradient(90deg, rgba(84, 104, 92, 0.24), rgba(155, 82, 70, 0.12));
-      }
-
-      .quote-bars span:last-child {
-        width: 58%;
+      .review-card.featured p,
+      .review-card.featured .muted {
+        color: rgba(255, 255, 255, 0.72);
       }
 
       details {
@@ -617,7 +605,7 @@
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "BeautySalon"],
         "name": "Afreen Unisex Salon",
-        "description": "Beauty salon in Dehradun. Services, hours, images, price range, website URL, and map details require owner confirmation before publication.",
+        "description": "Beauty salon in Dehradun. Services, hours, images, price range, website URL, and map details should be confirmed by the owner before final publication.",
         "telephone": "+91 92582 11276",
         "address": {
           "@type": "PostalAddress",
@@ -635,7 +623,7 @@
         "additionalProperty": [
           {
             "@type": "PropertyValue",
-            "name": "Owner confirmation required",
+            "name": "Owner confirmation note",
             "value": "Exact business address formatting, opening hours, services, pricing, website URL, images, geo coordinates, and review excerpts are unknown from supplied facts."
           },
           {
@@ -669,7 +657,7 @@
       <section class="hero" id="top" aria-labelledby="page-title">
         <picture>
           <source srcset="assets/salon-immersive-720.jpg 720w, assets/salon-immersive-1280.jpg 1280w, assets/salon-immersive-1920.jpg 1920w" sizes="100vw">
-          <img src="assets/salon-immersive-1280.jpg" width="1280" height="720" alt="Generic placeholder photograph of a modern salon interior for owner replacement before publication" fetchpriority="high">
+          <img src="assets/salon-immersive-1280.jpg" width="1280" height="720" alt="Modern salon interior image used as draft visual direction for Afreen Unisex Salon" fetchpriority="high">
         </picture>
         <div class="hero-inner">
           <div class="hero-copy">
@@ -697,7 +685,7 @@
             </div>
           </div>
 
-          <p class="placeholder dark"><strong>Placeholder before publication:</strong> This generated hero image and every marked content block must be replaced or approved by the owner before launch.</p>
+          <p class="draft-note dark"><strong>Draft note:</strong> This page uses verified contact and rating data. Service details, hours, real photos, and review excerpts should be confirmed by the owner before final publication.</p>
         </div>
       </section>
 
@@ -732,28 +720,28 @@
           <div>
             <p class="section-kicker">Service menu</p>
             <h2 id="services-title">Structured for real services, not filler.</h2>
-            <p class="section-copy">These rows are placeholders for owner-approved service categories. Keep only services that are actually offered.</p>
+            <p class="section-copy">Service categories are presented broadly so customers can understand the salon focus without the page inventing specific treatments or prices.</p>
           </div>
           <div class="service-board">
             <div class="service-row">
               <span class="service-index">01</span>
               <h3>Hair services</h3>
-              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Add exact hair service names, availability, and any consultation notes.</p>
+              <p class="service-note"><strong>Common category:</strong> Confirm exact hair services, consultation needs, and availability directly with the salon.</p>
             </div>
             <div class="service-row">
               <span class="service-index">02</span>
               <h3>Skin or beauty services</h3>
-              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Add only currently available beauty services and required disclaimers.</p>
+              <p class="service-note"><strong>Common category:</strong> Beauty service availability can vary; ask the salon for the current menu before visiting.</p>
             </div>
             <div class="service-row">
               <span class="service-index">03</span>
               <h3>Grooming and styling</h3>
-              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Confirm grooming, styling, appointment, and walk-in details.</p>
+              <p class="service-note"><strong>Common category:</strong> Confirm styling, grooming, appointment, and walk-in details by WhatsApp or phone.</p>
             </div>
             <div class="service-row">
               <span class="service-index">04</span>
               <h3>Event or package services</h3>
-              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Include bridal, event, or package services only if actually offered.</p>
+              <p class="service-note"><strong>Ask first:</strong> Event, bridal, or package services should be confirmed with the salon before booking.</p>
             </div>
           </div>
         </div>
@@ -770,7 +758,7 @@
             </div>
             <div>
               <h3>What needs approval</h3>
-              <p><span class="label">Owner confirmation required</span><br>[PLACEHOLDER] Add a real description of the salon, team, hygiene process, and appointment experience.</p>
+              <p>Add the owner-approved salon story, team details, hygiene process, and appointment experience here before using this as the final business website.</p>
             </div>
             <div class="about-callout">
               <h3>Audit gap</h3>
@@ -784,24 +772,21 @@
         <div class="shell split">
           <div>
             <p class="section-kicker">Reviews</p>
-            <h2 id="reviews-title">Trust without fake testimonials.</h2>
-            <p class="section-copy">The aggregate rating and count are supplied facts. Individual review quotes stay as placeholders until real excerpts are approved.</p>
+            <h2 id="reviews-title">Trust signals without fake testimonials.</h2>
+            <p class="section-copy">The supplied rating and review count are shown clearly. Individual quotes are intentionally omitted until real excerpts are approved.</p>
           </div>
-          <div class="review-grid" aria-label="Review placeholders">
-            <article class="review-card">
-              <span class="label">Placeholder</span>
-              <div class="quote-bars" aria-hidden="true"><span></span><span></span><span></span></div>
-              <p><strong>[PLACEHOLDER]</strong> Add a real review excerpt only with accurate attribution and permission.</p>
+          <div class="review-grid" aria-label="Review trust information">
+            <article class="review-card featured">
+              <h3>4.9 rating</h3>
+              <p>Supplied rating from the business data.</p>
             </article>
             <article class="review-card">
-              <span class="label">Placeholder</span>
-              <div class="quote-bars" aria-hidden="true"><span></span><span></span><span></span></div>
-              <p><strong>[PLACEHOLDER]</strong> Add another owner-approved review excerpt or remove this block.</p>
+              <h3>198 reviews</h3>
+              <p class="muted">Supplied review count. Add real excerpts later only with accurate attribution.</p>
             </article>
             <article class="review-card">
-              <span class="label">Placeholder</span>
-              <div class="quote-bars" aria-hidden="true"><span></span><span></span><span></span></div>
-              <p><strong>[PLACEHOLDER]</strong> Keep review content verifiable, current, and non-misleading.</p>
+              <h3>No invented quotes</h3>
+              <p class="muted">This page avoids made-up testimonials and keeps trust content verifiable.</p>
             </article>
           </div>
         </div>
@@ -817,15 +802,15 @@
           <div>
             <details>
               <summary>Do I need an appointment?</summary>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Confirm whether appointments, walk-ins, or both are accepted.</p>
+              <p>Please WhatsApp or call the salon to confirm appointment and walk-in availability.</p>
             </details>
             <details>
               <summary>What services are available?</summary>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Add only services currently offered by Afreen Unisex Salon.</p>
+              <p>This demo shows broad service categories only. Confirm the current service menu directly with Afreen Unisex Salon.</p>
             </details>
             <details>
               <summary>What are the opening hours?</summary>
-              <p><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Opening hours were not supplied and must be confirmed before publication.</p>
+              <p>Opening hours were not supplied. Please call or WhatsApp to confirm today&apos;s availability.</p>
             </details>
             <details>
               <summary>Where is the salon located?</summary>
@@ -846,16 +831,16 @@
               Race Course, Dehradun,<br>
               Uttarakhand 248001, India
             </address>
-            <p class="muted"><strong>[OWNER CONFIRMATION REQUIRED]</strong> The supplied address includes promotional wording. Confirm the preferred public address before publishing.</p>
+            <p class="muted">The supplied address includes promotional wording, so the preferred public address should be cleaned up with the owner before final publication.</p>
             <div class="actions">
               <a class="button primary" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20please%20share%20your%20location%20and%20availability." rel="noopener">Ask on WhatsApp</a>
               <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=52%20Subhash%20Rd%20near%20mkp%20chowk%20Race%20Course%20Dehradun%20Uttarakhand%20248001%20India" rel="noopener">Open map</a>
             </div>
           </div>
-          <div class="map-panel" role="img" aria-label="Map placeholder for Afreen Unisex Salon address in Dehradun">
+          <div class="map-panel" role="img" aria-label="Map area for Afreen Unisex Salon address in Dehradun">
             <div>
-              <h3>Map placeholder</h3>
-              <p class="muted"><strong>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</strong> Embed or link to the owner-approved Google Business Profile map after confirming the exact listing.</p>
+              <h3>Find the salon</h3>
+              <p class="muted">Open the map link for the supplied Subhash Road, Race Course area address. The final site should use the owner-approved Google Business Profile listing.</p>
             </div>
           </div>
         </div>
@@ -865,24 +850,24 @@
         <div class="shell split">
           <div>
             <p class="section-kicker">Hours</p>
-            <h2 id="hours-title">Opening hours need confirmation.</h2>
-            <p class="section-copy">Hours were not included in the supplied facts. Do not publish operating hours until the owner confirms them.</p>
+            <h2 id="hours-title">Confirm today&apos;s availability.</h2>
+            <p class="section-copy">Opening hours were not included in the supplied facts, so this demo directs customers to confirm by WhatsApp or phone.</p>
           </div>
           <div>
             <table class="hours-table">
-              <caption>Placeholder hours table for owner completion</caption>
+              <caption>Availability guidance</caption>
               <tbody>
                 <tr>
                   <th scope="row">Monday-Friday</th>
-                  <td>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</td>
+                  <td>Call or WhatsApp to confirm.</td>
                 </tr>
                 <tr>
                   <th scope="row">Saturday</th>
-                  <td>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</td>
+                  <td>Call or WhatsApp to confirm.</td>
                 </tr>
                 <tr>
                   <th scope="row">Sunday</th>
-                  <td>[PLACEHOLDER - OWNER CONFIRMATION REQUIRED]</td>
+                  <td>Call or WhatsApp to confirm.</td>
                 </tr>
               </tbody>
             </table>
@@ -895,7 +880,7 @@
       <div class="shell footer-grid">
         <div>
           <strong>Afreen Unisex Salon</strong>
-          <p class="muted">Beauty salon in Dehradun. Draft page prepared with owner-confirmation placeholders clearly marked before publication.</p>
+          <p class="muted">Beauty salon in Dehradun. Demo page using supplied business facts and owner-review notes where details are missing.</p>
         </div>
         <div>
           <p><a href="tel:+919258211276">Call +91 92582 11276</a></p>
