@@ -259,12 +259,15 @@
 
       .floating-contact {
         position: fixed;
-        inset: auto 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
+        left: 50%;
+        right: auto;
+        bottom: calc(1rem + env(safe-area-inset-bottom));
+        transform: translateX(-50%);
         z-index: 12;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.6rem;
-        width: min(100% - 2rem, 440px);
+        grid-template-columns: repeat(2, 52px);
+        gap: 0.55rem;
+        width: max-content;
         margin-inline: auto;
         padding: 0.55rem;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -275,14 +278,21 @@
       }
 
       .floating-contact a {
-        min-height: 48px;
+        width: 52px;
+        height: 52px;
+        min-height: 52px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.45rem;
         border-radius: 8px;
         font-weight: 900;
         text-decoration: none;
+      }
+
+      .floating-contact svg {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 auto;
       }
 
       .floating-contact .whatsapp {
@@ -541,7 +551,7 @@
         .floating-contact {
           right: 1.5rem;
           left: auto;
-          width: 360px;
+          transform: none;
         }
       }
 
@@ -812,8 +822,17 @@
     </footer>
 
     <nav class="floating-contact" aria-label="Quick contact">
-      <a class="whatsapp" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20I%20would%20like%20to%20ask%20about%20an%20appointment." rel="noopener">WhatsApp</a>
-      <a class="call" href="tel:+919258211276">Call</a>
+      <a class="whatsapp" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20I%20would%20like%20to%20ask%20about%20an%20appointment." rel="noopener" aria-label="WhatsApp Afreen Unisex Salon">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <path d="M5.4 18.7 6.3 15A7.4 7.4 0 1 1 9 17.6l-3.6 1.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9.2 8.4c.2-.4.3-.4.6-.4h.4c.2 0 .4 0 .5.4l.7 1.5c.1.3.1.5-.1.7l-.4.5c-.1.1-.2.3-.1.5.3.5.7 1.1 1.2 1.5.6.5 1.1.8 1.7 1 .2.1.3 0 .5-.1l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.4.4-1.2.6-2.1.4-1.1-.2-2.5-.8-3.9-2.1-1.4-1.3-2.3-2.8-2.7-4-.3-.9-.1-1.6.1-2.1Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a class="call" href="tel:+919258211276" aria-label="Call Afreen Unisex Salon">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <path d="M8.1 5.2 9.3 8c.3.7.1 1.4-.4 1.8l-.8.7a12.8 12.8 0 0 0 5.4 5.4l.7-.8c.5-.5 1.2-.7 1.8-.4l2.8 1.2c.8.3 1.2 1.2 1 2l-.4 1.7c-.2.8-.9 1.4-1.8 1.4A14.6 14.6 0 0 1 3 6.4c0-.9.6-1.6 1.4-1.8l1.7-.4c.8-.2 1.6.2 2 .9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </nav>
   </body>
 </html>
