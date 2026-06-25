@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Afreen Unisex Salon | Beauty Salon in Dehradun</title>
-    <meta name="description" content="Afreen Unisex Salon in Dehradun. A fast, accessible landing page with WhatsApp contact, phone contact, supplied trust signals, location, and owner review notes.">
+    <meta name="description" content="Afreen Unisex Salon in Dehradun. Call or WhatsApp for appointments, service availability, location details, and current hours.">
     <meta property="og:title" content="Afreen Unisex Salon | Beauty Salon in Dehradun">
-    <meta property="og:description" content="Modern accessible landing page for Afreen Unisex Salon with clear contact options and supplied trust signals.">
+    <meta property="og:description" content="Contact Afreen Unisex Salon in Dehradun by WhatsApp or phone. View service categories, location, rating, and availability guidance.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/salon-immersive-1280.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <style>
       :root {
         color-scheme: light;
-        --ink: #14120f;
-        --muted: #665f57;
-        --soft: #f6f1ea;
-        --paper: #fffcf7;
-        --line: rgba(20, 18, 15, 0.14);
-        --panel: rgba(255, 252, 247, 0.92);
-        --charcoal: #191714;
-        --sage: #54685c;
-        --clay: #9b5246;
-        --blush: #ead3c8;
+        --ink: #151515;
+        --muted: #62615d;
+        --paper: #fffdf8;
+        --cream: #f4efe6;
+        --sage: #6f7f69;
+        --moss: #303b32;
+        --rose: #a85f54;
+        --line: rgba(21, 21, 21, 0.14);
+        --white: #ffffff;
         --focus: #ffbf47;
-        --max: 1180px;
+        --max: 1160px;
+        --radius: 8px;
       }
 
       * {
@@ -39,7 +39,7 @@
         margin: 0;
         background: var(--paper);
         color: var(--ink);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         font-size: 16px;
         line-height: 1.55;
       }
@@ -63,12 +63,13 @@
 
       .skip-link {
         position: fixed;
-        inset: 1rem auto auto 1rem;
+        left: 1rem;
+        top: 1rem;
         z-index: 20;
-        transform: translateY(-180%);
-        background: #fff;
-        color: #000;
-        padding: 0.7rem 0.9rem;
+        transform: translateY(-160%);
+        background: var(--ink);
+        color: var(--white);
+        padding: 0.7rem 0.95rem;
         text-decoration: none;
       }
 
@@ -76,20 +77,18 @@
         transform: translateY(0);
       }
 
-      .nav-wrap {
+      .site-header {
         position: fixed;
         inset: 0 0 auto 0;
         z-index: 10;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-        background: linear-gradient(180deg, rgba(15, 14, 12, 0.84), rgba(15, 14, 12, 0.28));
-        color: #fff;
-        backdrop-filter: blur(18px);
+        color: var(--white);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0));
       }
 
       .nav {
         width: min(100% - 2rem, var(--max));
-        min-height: 72px;
-        margin: 0 auto;
+        min-height: 74px;
+        margin-inline: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -98,34 +97,33 @@
 
       .brand {
         display: grid;
-        gap: 0.05rem;
         text-decoration: none;
       }
 
       .brand strong {
-        font-size: 0.98rem;
+        font-size: 1rem;
         letter-spacing: 0;
       }
 
       .brand span {
-        color: rgba(255, 255, 255, 0.72);
-        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.8rem;
       }
 
       .nav-links {
         display: none;
         gap: 1rem;
         align-items: center;
-        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.9rem;
       }
 
       .nav-links a {
-        color: rgba(255, 255, 255, 0.78);
         text-decoration: none;
       }
 
       .nav-links a:hover {
-        color: #fff;
+        color: var(--white);
       }
 
       .shell {
@@ -135,12 +133,12 @@
 
       .hero {
         position: relative;
-        min-height: 100svh;
+        min-height: 92svh;
         display: grid;
         align-items: end;
         overflow: hidden;
-        background: var(--charcoal);
-        color: #fff;
+        background: #151515;
+        color: var(--white);
       }
 
       .hero picture,
@@ -153,7 +151,6 @@
 
       .hero img {
         object-fit: cover;
-        filter: saturate(0.92) contrast(1.04);
       }
 
       .hero::after {
@@ -161,29 +158,27 @@
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(90deg, rgba(10, 9, 8, 0.92) 0%, rgba(10, 9, 8, 0.72) 38%, rgba(10, 9, 8, 0.18) 76%),
-          linear-gradient(180deg, rgba(10, 9, 8, 0.32) 0%, rgba(10, 9, 8, 0.12) 45%, rgba(10, 9, 8, 0.72) 100%);
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 50%, rgba(0, 0, 0, 0.08)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.66));
       }
 
-      .hero-inner {
+      .hero-content {
         position: relative;
         z-index: 1;
         width: min(100% - 2rem, var(--max));
-        margin: 0 auto;
-        padding: 8rem 0 2rem;
+        margin-inline: auto;
+        padding: 8rem 0 3rem;
       }
 
       .hero-copy {
         max-width: 680px;
-        display: grid;
-        gap: 1rem;
       }
 
       .eyebrow {
-        margin: 0;
-        color: #f4ded4;
+        margin: 0 0 0.85rem;
+        color: #f2d8cf;
         font-size: 0.78rem;
-        font-weight: 800;
+        font-weight: 850;
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
@@ -196,40 +191,38 @@
       }
 
       h1 {
-        max-width: 10.6ch;
-        margin-bottom: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(3.25rem, 14vw, 8.5rem);
-        line-height: 0.84;
+        margin-bottom: 1rem;
+        max-width: 10.5ch;
+        font-size: clamp(3rem, 12vw, 7.1rem);
+        line-height: 0.9;
         letter-spacing: 0;
       }
 
       h2 {
-        margin-bottom: 0.7rem;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.1rem, 6vw, 4.4rem);
-        line-height: 0.94;
+        margin-bottom: 0.8rem;
+        max-width: 12ch;
+        font-size: clamp(2rem, 6vw, 4.2rem);
+        line-height: 0.95;
         letter-spacing: 0;
       }
 
       h3 {
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.4rem;
         font-size: 1.05rem;
-        line-height: 1.2;
+        line-height: 1.25;
       }
 
       .lede {
-        max-width: 58ch;
-        margin-bottom: 0;
-        color: rgba(255, 255, 255, 0.82);
-        font-size: clamp(1.02rem, 2.6vw, 1.35rem);
+        max-width: 56ch;
+        margin-bottom: 1.4rem;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: clamp(1.05rem, 2.6vw, 1.35rem);
       }
 
       .actions {
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
-        margin-top: 0.45rem;
       }
 
       .button {
@@ -238,83 +231,91 @@
         align-items: center;
         justify-content: center;
         border: 1px solid transparent;
-        border-radius: 8px;
-        padding: 0.8rem 1.05rem;
+        border-radius: var(--radius);
+        padding: 0.78rem 1.05rem;
         font-weight: 850;
         text-decoration: none;
       }
 
       .button.primary {
-        background: #fff;
-        color: #14120f;
+        background: var(--white);
+        color: var(--ink);
       }
 
       .button.primary:hover {
-        background: #f4ded4;
+        background: #f4ded7;
       }
 
       .button.secondary {
-        border-color: rgba(255, 255, 255, 0.32);
-        color: #fff;
-        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.36);
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.1);
       }
 
       .button.secondary:hover {
-        border-color: #fff;
+        border-color: var(--white);
       }
 
-      .hero-panel {
-        margin-top: 2rem;
+      .hero-facts {
+        width: min(100%, 860px);
         display: grid;
-        gap: 0;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        background: rgba(18, 16, 14, 0.6);
-        backdrop-filter: blur(18px);
+        gap: 1px;
+        margin-top: 2.3rem;
+        background: rgba(255, 255, 255, 0.24);
+        border: 1px solid rgba(255, 255, 255, 0.2);
       }
 
-      .hero-panel > * {
+      .hero-fact {
+        background: rgba(13, 13, 13, 0.58);
         padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(12px);
       }
 
-      .hero-panel > *:last-child {
-        border-bottom: 0;
-      }
-
-      .metric strong {
+      .hero-fact strong {
         display: block;
-        color: #fff;
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 1;
       }
 
-      .metric span,
-      .note {
-        color: rgba(255, 255, 255, 0.72);
+      .hero-fact span {
+        color: rgba(255, 255, 255, 0.78);
         font-size: 0.9rem;
       }
 
-      .draft-note {
-        color: #5b221b;
-        background: #fff2ed;
-        border-left: 4px solid var(--clay);
-        padding: 0.9rem 1rem;
-        border-radius: 0 8px 8px 0;
-        font-size: 0.94rem;
-      }
-
-      .draft-note.dark {
-        color: #ffe5dc;
-        background: rgba(155, 82, 70, 0.22);
-        border-left-color: #ffd2c3;
-      }
-
       .section {
-        padding: 4rem 0;
+        padding: 4.5rem 0;
       }
 
-      .section.soft {
-        background: var(--soft);
+      .section.cream {
+        background: var(--cream);
+      }
+
+      .section.dark {
+        background: var(--moss);
+        color: var(--white);
+      }
+
+      .section.dark .muted,
+      .section.dark .section-copy {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .section-kicker {
+        margin: 0 0 0.75rem;
+        color: var(--rose);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .section.dark .section-kicker {
+        color: #f0d5ca;
+      }
+
+      .section-copy {
+        max-width: 64ch;
+        color: var(--muted);
       }
 
       .split {
@@ -322,107 +323,62 @@
         gap: 2rem;
       }
 
-      .section-kicker {
-        margin-bottom: 0.6rem;
-        color: var(--clay);
-        font-size: 0.76rem;
-        font-weight: 900;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
+      .service-list {
+        display: grid;
+        border-top: 1px solid var(--line);
       }
 
-      .section-copy {
-        max-width: 68ch;
+      .service-item {
+        display: grid;
+        gap: 0.7rem;
+        border-bottom: 1px solid var(--line);
+        padding: 1.15rem 0;
+      }
+
+      .service-number {
+        color: var(--rose);
+        font-size: 0.8rem;
+        font-weight: 900;
+      }
+
+      .service-item p {
+        margin-bottom: 0;
         color: var(--muted);
       }
 
-      .trust-strip {
+      .feature-grid {
         display: grid;
-        gap: 1px;
-        background: var(--line);
+        gap: 1rem;
+      }
+
+      .feature {
+        min-height: 152px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         border: 1px solid var(--line);
+        background: var(--white);
+        padding: 1.1rem;
+        border-radius: var(--radius);
       }
 
-      .trust-item {
-        background: var(--paper);
-        padding: 1.2rem;
+      .feature.dark-card {
+        border-color: transparent;
+        background: var(--ink);
+        color: var(--white);
       }
 
-      .trust-item strong {
-        display: block;
-        font-size: 2.25rem;
+      .feature strong {
+        font-size: 2rem;
         line-height: 1;
       }
 
-      .trust-item span {
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      .service-board {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .service-row {
-        display: grid;
-        gap: 0.7rem;
-        border-top: 1px solid var(--line);
-        padding: 1.1rem 0;
-      }
-
-      .service-row:last-child {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .service-index {
-        color: var(--clay);
-        font-weight: 900;
-      }
-
-      .service-note {
+      .feature p {
+        margin-bottom: 0;
         color: var(--muted);
       }
 
-      .service-note strong {
-        color: var(--ink);
-      }
-
-      .about-block {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .about-callout {
-        background: var(--charcoal);
-        color: #fff;
-        padding: 1.3rem;
-        border-radius: 8px;
-      }
-
-      .about-callout p {
-        color: rgba(255, 255, 255, 0.76);
-      }
-
-      .review-grid {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .review-card {
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.52);
-        padding: 1.1rem;
-        border-radius: 8px;
-      }
-
-      .review-card.featured {
-        background: var(--charcoal);
-        color: #fff;
-      }
-
-      .review-card.featured p,
-      .review-card.featured .muted {
+      .feature.dark-card p {
         color: rgba(255, 255, 255, 0.72);
       }
 
@@ -436,74 +392,57 @@
 
       summary {
         cursor: pointer;
-        padding: 1.05rem 0;
-        font-weight: 900;
+        padding: 1rem 0;
+        font-weight: 850;
       }
 
       details p {
-        max-width: 68ch;
+        max-width: 64ch;
+        padding-bottom: 1rem;
         color: var(--muted);
-        padding-bottom: 1.1rem;
       }
 
-      .location-band {
-        background: var(--charcoal);
-        color: #fff;
-      }
-
-      .location-band .section-kicker {
-        color: #f4ded4;
-      }
-
-      .location-band .section-copy,
-      .location-band .muted {
-        color: rgba(255, 255, 255, 0.72);
+      .location-grid {
+        display: grid;
+        gap: 1.2rem;
       }
 
       address {
         font-style: normal;
       }
 
-      .map-panel {
-        min-height: 320px;
+      .location-panel {
+        min-height: 280px;
         display: grid;
         place-items: center;
-        border: 1px solid rgba(255, 255, 255, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius);
         background:
-          linear-gradient(135deg, rgba(234, 211, 200, 0.16), rgba(84, 104, 92, 0.26)),
-          #211e1a;
-        padding: 1.2rem;
+          linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(168, 95, 84, 0.16)),
+          rgba(255, 255, 255, 0.05);
+        padding: 1.25rem;
         text-align: center;
-        border-radius: 8px;
       }
 
-      .hours-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: var(--paper);
-      }
-
-      .hours-table caption {
-        padding: 0 0 1rem;
-        color: var(--muted);
-        text-align: left;
-      }
-
-      .hours-table th,
-      .hours-table td {
+      .hours-row {
+        display: grid;
+        gap: 1rem;
         border-top: 1px solid var(--line);
-        padding: 0.95rem 0;
-        text-align: left;
-        vertical-align: top;
+        padding: 1rem 0;
       }
 
-      .hours-table th {
-        width: 34%;
+      .hours-row:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hours-row p {
+        margin-bottom: 0;
+        color: var(--muted);
       }
 
       .site-footer {
-        background: #0f0e0c;
-        color: #fff;
+        background: #0f0f0f;
+        color: var(--white);
         padding: 2rem 0;
       }
 
@@ -513,7 +452,7 @@
       }
 
       .site-footer a {
-        color: #fff;
+        color: var(--white);
       }
 
       .muted {
@@ -521,74 +460,43 @@
       }
 
       .site-footer .muted {
-        color: rgba(255, 255, 255, 0.64);
+        color: rgba(255, 255, 255, 0.66);
       }
 
-      @media (max-width: 520px) {
-        .hours-table,
-        .hours-table tbody,
-        .hours-table tr,
-        .hours-table th,
-        .hours-table td {
-          display: block;
-          width: 100%;
-        }
-
-        .hours-table tr {
-          border-top: 1px solid var(--line);
-          padding: 0.85rem 0;
-        }
-
-        .hours-table th,
-        .hours-table td {
-          border: 0;
-          padding: 0.12rem 0;
-        }
-      }
-
-      @media (min-width: 760px) {
+      @media (min-width: 740px) {
         .nav-links {
           display: flex;
         }
 
-        .hero-inner {
-          padding-bottom: 3rem;
-        }
-
-        .hero-panel {
+        .hero-facts {
           grid-template-columns: repeat(3, 1fr);
-        }
-
-        .hero-panel > * {
-          border-bottom: 0;
-          border-right: 1px solid rgba(255, 255, 255, 0.14);
-        }
-
-        .hero-panel > *:last-child {
-          border-right: 0;
         }
 
         .split {
-          grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+          grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
           align-items: start;
         }
 
-        .trust-strip {
-          grid-template-columns: repeat(3, 1fr);
-        }
-
-        .service-row {
-          grid-template-columns: 4rem 1fr 1.15fr;
+        .service-item {
+          grid-template-columns: 4rem minmax(0, 0.8fr) minmax(0, 1.2fr);
           align-items: start;
         }
 
-        .about-block,
-        .review-grid {
+        .feature-grid {
           grid-template-columns: repeat(3, 1fr);
+        }
+
+        .location-grid {
+          grid-template-columns: 0.85fr 1.15fr;
+          align-items: stretch;
+        }
+
+        .hours-row {
+          grid-template-columns: 0.8fr 1.2fr;
         }
 
         .footer-grid {
-          grid-template-columns: 1.2fr 0.8fr;
+          grid-template-columns: 1.1fr 0.9fr;
         }
       }
 
@@ -605,7 +513,7 @@
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "BeautySalon"],
         "name": "Afreen Unisex Salon",
-        "description": "Beauty salon in Dehradun. Services, hours, images, price range, website URL, and map details should be confirmed by the owner before final publication.",
+        "description": "Beauty salon in Dehradun. Exact services, opening hours, price range, real images, website URL, and map details should be confirmed by the owner.",
         "telephone": "+91 92582 11276",
         "address": {
           "@type": "PostalAddress",
@@ -624,7 +532,7 @@
           {
             "@type": "PropertyValue",
             "name": "Owner confirmation note",
-            "value": "Exact business address formatting, opening hours, services, pricing, website URL, images, geo coordinates, and review excerpts are unknown from supplied facts."
+            "value": "Exact service menu, opening hours, price range, real images, geo coordinates, review excerpts, and address formatting are unknown from supplied facts."
           },
           {
             "@type": "PropertyValue",
@@ -638,11 +546,11 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="nav-wrap">
+    <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Afreen Unisex Salon home">
           <strong>Afreen Unisex Salon</strong>
-          <span>Dehradun beauty salon</span>
+          <span>Beauty salon in Dehradun</span>
         </a>
         <div class="nav-links" aria-label="Page sections">
           <a href="#services">Services</a>
@@ -657,59 +565,56 @@
       <section class="hero" id="top" aria-labelledby="page-title">
         <picture>
           <source srcset="assets/salon-immersive-720.jpg 720w, assets/salon-immersive-1280.jpg 1280w, assets/salon-immersive-1920.jpg 1920w" sizes="100vw">
-          <img src="assets/salon-immersive-1280.jpg" width="1280" height="720" alt="Modern salon interior image used as draft visual direction for Afreen Unisex Salon" fetchpriority="high">
+          <img src="assets/salon-immersive-1280.jpg" width="1280" height="720" alt="Modern salon interior visual for Afreen Unisex Salon" fetchpriority="high">
         </picture>
-        <div class="hero-inner">
+        <div class="hero-content">
           <div class="hero-copy">
-            <p class="eyebrow">Beauty salon / Dehradun</p>
+            <p class="eyebrow">Unisex salon in Dehradun</p>
             <h1 id="page-title">Afreen Unisex Salon</h1>
-            <p class="lede">A more polished owned web presence for customers to review the supplied business facts, find the location, and contact the salon directly.</p>
+            <p class="lede">For salon visits, service availability, and appointments, contact the team directly on WhatsApp or phone.</p>
             <div class="actions" aria-label="Contact actions">
               <a class="button primary" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20I%20would%20like%20to%20ask%20about%20an%20appointment." rel="noopener">WhatsApp</a>
               <a class="button secondary" href="tel:+919258211276">Call +91 92582 11276</a>
             </div>
           </div>
-
-          <div class="hero-panel" aria-label="Supplied trust signals">
-            <div class="metric">
+          <div class="hero-facts" aria-label="Business highlights">
+            <div class="hero-fact">
               <strong>4.9</strong>
-              <span>Supplied rating</span>
+              <span>Listed rating</span>
             </div>
-            <div class="metric">
+            <div class="hero-fact">
               <strong>198</strong>
-              <span>Supplied review count</span>
+              <span>Listed reviews</span>
             </div>
-            <div>
-              <strong>Owned site gap</strong>
-              <p class="note">No website was found, limiting service evaluation and direct conversion.</p>
+            <div class="hero-fact">
+              <strong>Dehradun</strong>
+              <span>Race Course area</span>
             </div>
           </div>
-
-          <p class="draft-note dark"><strong>Draft note:</strong> This page uses verified contact and rating data. Service details, hours, real photos, and review excerpts should be confirmed by the owner before final publication.</p>
         </div>
       </section>
 
-      <section class="section soft" aria-labelledby="trust-title">
+      <section class="section cream" aria-labelledby="intro-title">
         <div class="shell split">
           <div>
-            <p class="section-kicker">Verified display data</p>
-            <h2 id="trust-title">Only the facts supplied.</h2>
+            <p class="section-kicker">Quick contact</p>
+            <h2 id="intro-title">Simple ways to plan your visit.</h2>
           </div>
           <div>
-            <p class="section-copy">The page uses the scraped business facts only as display data. It does not invent testimonials, credentials, pricing, years in business, service outcomes, or revenue claims.</p>
-            <div class="trust-strip" aria-label="Known facts">
-              <div class="trust-item">
-                <strong>4.9</strong>
-                <span>Rating from supplied data.</span>
-              </div>
-              <div class="trust-item">
-                <strong>198</strong>
-                <span>Review count from supplied data.</span>
-              </div>
-              <div class="trust-item">
-                <strong>0</strong>
-                <span>Owned website found in the audit.</span>
-              </div>
+            <p class="section-copy">Use WhatsApp for appointment questions, service availability, directions, and current hours. Use the call option if you need a faster answer.</p>
+            <div class="feature-grid" aria-label="Contact options">
+              <article class="feature dark-card">
+                <strong>WhatsApp</strong>
+                <p>Best for service questions and appointment requests.</p>
+              </article>
+              <article class="feature">
+                <strong>Call</strong>
+                <p>Use the listed phone number for immediate availability.</p>
+              </article>
+              <article class="feature">
+                <strong>Visit</strong>
+                <p>Located around Subhash Road, Race Course, Dehradun.</p>
+              </article>
             </div>
           </div>
         </div>
@@ -718,129 +623,79 @@
       <section class="section" id="services" aria-labelledby="services-title">
         <div class="shell split">
           <div>
-            <p class="section-kicker">Service menu</p>
-            <h2 id="services-title">Structured for real services, not filler.</h2>
-            <p class="section-copy">Service categories are presented broadly so customers can understand the salon focus without the page inventing specific treatments or prices.</p>
+            <p class="section-kicker">Services</p>
+            <h2 id="services-title">Salon categories to ask about.</h2>
+            <p class="section-copy">Specific treatments, prices, and timings should be confirmed directly with the salon.</p>
           </div>
-          <div class="service-board">
-            <div class="service-row">
-              <span class="service-index">01</span>
+          <div class="service-list">
+            <article class="service-item">
+              <span class="service-number">01</span>
               <h3>Hair services</h3>
-              <p class="service-note"><strong>Common category:</strong> Confirm exact hair services, consultation needs, and availability directly with the salon.</p>
-            </div>
-            <div class="service-row">
-              <span class="service-index">02</span>
-              <h3>Skin or beauty services</h3>
-              <p class="service-note"><strong>Common category:</strong> Beauty service availability can vary; ask the salon for the current menu before visiting.</p>
-            </div>
-            <div class="service-row">
-              <span class="service-index">03</span>
+              <p>Ask about current hair service options, consultations, and appointment availability.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number">02</span>
+              <h3>Beauty services</h3>
+              <p>Confirm the current beauty service menu before visiting or booking.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number">03</span>
               <h3>Grooming and styling</h3>
-              <p class="service-note"><strong>Common category:</strong> Confirm styling, grooming, appointment, and walk-in details by WhatsApp or phone.</p>
-            </div>
-            <div class="service-row">
-              <span class="service-index">04</span>
-              <h3>Event or package services</h3>
-              <p class="service-note"><strong>Ask first:</strong> Event, bridal, or package services should be confirmed with the salon before booking.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section soft" aria-labelledby="about-title">
-        <div class="shell">
-          <p class="section-kicker">About</p>
-          <h2 id="about-title">A sharper first impression for local search visitors.</h2>
-          <div class="about-block">
-            <div>
-              <h3>What is known</h3>
-              <p>Afreen Unisex Salon is listed as a beauty salon in Dehradun with the supplied phone and WhatsApp contact.</p>
-            </div>
-            <div>
-              <h3>What needs approval</h3>
-              <p>Add the owner-approved salon story, team details, hygiene process, and appointment experience here before using this as the final business website.</p>
-            </div>
-            <div class="about-callout">
-              <h3>Audit gap</h3>
-              <p>No website was found, so customers cannot evaluate services or convert through an owned web channel.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="reviews" aria-labelledby="reviews-title">
-        <div class="shell split">
-          <div>
-            <p class="section-kicker">Reviews</p>
-            <h2 id="reviews-title">Trust signals without fake testimonials.</h2>
-            <p class="section-copy">The supplied rating and review count are shown clearly. Individual quotes are intentionally omitted until real excerpts are approved.</p>
-          </div>
-          <div class="review-grid" aria-label="Review trust information">
-            <article class="review-card featured">
-              <h3>4.9 rating</h3>
-              <p>Supplied rating from the business data.</p>
+              <p>Check walk-in availability and styling options by WhatsApp or phone.</p>
             </article>
-            <article class="review-card">
-              <h3>198 reviews</h3>
-              <p class="muted">Supplied review count. Add real excerpts later only with accurate attribution.</p>
-            </article>
-            <article class="review-card">
-              <h3>No invented quotes</h3>
-              <p class="muted">This page avoids made-up testimonials and keeps trust content verifiable.</p>
+            <article class="service-item">
+              <span class="service-number">04</span>
+              <h3>Event services</h3>
+              <p>Ask first for event, bridal, or package availability before planning a visit.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section soft" id="faq" aria-labelledby="faq-title">
+      <section class="section cream" id="reviews" aria-labelledby="reviews-title">
         <div class="shell split">
           <div>
-            <p class="section-kicker">FAQ</p>
-            <h2 id="faq-title">Questions to finalize before launch.</h2>
-            <p class="section-copy">Answers remain conservative because operating details were not supplied.</p>
+            <p class="section-kicker">Trust</p>
+            <h2 id="reviews-title">Rating and reviews.</h2>
+            <p class="section-copy">No testimonial quotes are shown because no individual review text was supplied.</p>
           </div>
-          <div>
-            <details>
-              <summary>Do I need an appointment?</summary>
-              <p>Please WhatsApp or call the salon to confirm appointment and walk-in availability.</p>
-            </details>
-            <details>
-              <summary>What services are available?</summary>
-              <p>This demo shows broad service categories only. Confirm the current service menu directly with Afreen Unisex Salon.</p>
-            </details>
-            <details>
-              <summary>What are the opening hours?</summary>
-              <p>Opening hours were not supplied. Please call or WhatsApp to confirm today&apos;s availability.</p>
-            </details>
-            <details>
-              <summary>Where is the salon located?</summary>
-              <p>The supplied address is 52, Subhash Rd, near mkp chowk, Race Course, Dehradun, Uttarakhand 248001, India. Confirm formatting and map accuracy before launch.</p>
-            </details>
+          <div class="feature-grid">
+            <article class="feature dark-card">
+              <strong>4.9</strong>
+              <p>Listed rating for the salon.</p>
+            </article>
+            <article class="feature">
+              <strong>198</strong>
+              <p>Listed review count for the salon.</p>
+            </article>
+            <article class="feature">
+              <strong>Direct</strong>
+              <p>WhatsApp and phone contact options are available.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section location-band" id="location" aria-labelledby="location-title">
-        <div class="shell split">
+      <section class="section dark" id="location" aria-labelledby="location-title">
+        <div class="shell location-grid">
           <div>
             <p class="section-kicker">Location</p>
             <h2 id="location-title">Visit in Dehradun.</h2>
             <address>
-              best salon in, Top Salon in,<br>
               52, Subhash Rd, near mkp chowk,<br>
               Race Course, Dehradun,<br>
               Uttarakhand 248001, India
             </address>
-            <p class="muted">The supplied address includes promotional wording, so the preferred public address should be cleaned up with the owner before final publication.</p>
+            <p class="section-copy">The supplied source also included promotional address wording. Use the map link or contact the salon to confirm exact directions.</p>
             <div class="actions">
               <a class="button primary" href="https://wa.me/919258211276?text=Hello%20Afreen%20Unisex%20Salon%2C%20please%20share%20your%20location%20and%20availability." rel="noopener">Ask on WhatsApp</a>
               <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=52%20Subhash%20Rd%20near%20mkp%20chowk%20Race%20Course%20Dehradun%20Uttarakhand%20248001%20India" rel="noopener">Open map</a>
             </div>
           </div>
-          <div class="map-panel" role="img" aria-label="Map area for Afreen Unisex Salon address in Dehradun">
+          <div class="location-panel" role="img" aria-label="Location panel for Afreen Unisex Salon in Dehradun">
             <div>
-              <h3>Find the salon</h3>
-              <p class="muted">Open the map link for the supplied Subhash Road, Race Course area address. The final site should use the owner-approved Google Business Profile listing.</p>
+              <h3>Race Course, Dehradun</h3>
+              <p class="muted">Open the map link for directions, or message the salon before visiting.</p>
             </div>
           </div>
         </div>
@@ -850,27 +705,49 @@
         <div class="shell split">
           <div>
             <p class="section-kicker">Hours</p>
-            <h2 id="hours-title">Confirm today&apos;s availability.</h2>
-            <p class="section-copy">Opening hours were not included in the supplied facts, so this demo directs customers to confirm by WhatsApp or phone.</p>
+            <h2 id="hours-title">Confirm current availability.</h2>
+            <p class="section-copy">Opening hours were not included in the supplied facts, so customers should confirm before travelling.</p>
           </div>
           <div>
-            <table class="hours-table">
-              <caption>Availability guidance</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">Monday-Friday</th>
-                  <td>Call or WhatsApp to confirm.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Saturday</th>
-                  <td>Call or WhatsApp to confirm.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Sunday</th>
-                  <td>Call or WhatsApp to confirm.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="hours-row">
+              <h3>Today</h3>
+              <p>Call or WhatsApp to confirm opening status and appointment availability.</p>
+            </div>
+            <div class="hours-row">
+              <h3>Weekdays</h3>
+              <p>Confirm current timings directly with the salon.</p>
+            </div>
+            <div class="hours-row">
+              <h3>Weekend</h3>
+              <p>Ask before visiting, especially for longer services or event bookings.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cream" id="faq" aria-labelledby="faq-title">
+        <div class="shell split">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faq-title">Before you visit.</h2>
+          </div>
+          <div>
+            <details>
+              <summary>Do I need an appointment?</summary>
+              <p>Please WhatsApp or call the salon to confirm appointment and walk-in availability.</p>
+            </details>
+            <details>
+              <summary>What services are available?</summary>
+              <p>This page shows broad service categories only. Confirm the current service menu directly with Afreen Unisex Salon.</p>
+            </details>
+            <details>
+              <summary>What are the opening hours?</summary>
+              <p>Opening hours were not supplied. Please call or WhatsApp to confirm current availability.</p>
+            </details>
+            <details>
+              <summary>Where is the salon located?</summary>
+              <p>The supplied address is 52, Subhash Rd, near mkp chowk, Race Course, Dehradun, Uttarakhand 248001, India.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -880,7 +757,7 @@
       <div class="shell footer-grid">
         <div>
           <strong>Afreen Unisex Salon</strong>
-          <p class="muted">Beauty salon in Dehradun. Demo page using supplied business facts and owner-review notes where details are missing.</p>
+          <p class="muted">Beauty salon in Dehradun. Contact directly for current services, hours, and appointment availability.</p>
         </div>
         <div>
           <p><a href="tel:+919258211276">Call +91 92582 11276</a></p>
